@@ -8,16 +8,13 @@
     		<h1><a href="/">Annie's Blog</a></h1>
     	</div>
 
+        {% for post in posts %}
         <div>
-        	<p>published: 14.06.2020, 12:14</p>
-        	<h2><a href="">My First Blog</a></h2>
-        	<p>It describes my first project COVID-19 Data Analysis Project using Python and libraries NumPy, Pandas, Matplotlib and Seaborn.</p>
+            <p>published : {{post.published_date}}</p>
+            <h2><a href="">{{post.title}}</a></h2>
+            <p>{{post.text|linebreaksbr }}</p>
         </div>
+        {% endfor %}
 
-        <div>
-        	<p>published: 15.06.2020, 02:30</p>
-        	<h2><a href="">My Second Blog</a></h2>
-        	<p>It describes my Journey about how I got admitted in MNNIT Allahabad from Roorkee without doing any branded coaching and making it to JEE Advanced.</p>
-        </div>
     </body>
 </html>
